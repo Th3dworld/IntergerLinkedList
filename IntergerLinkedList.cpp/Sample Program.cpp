@@ -29,6 +29,14 @@ int main(){
 	//Display new data
 	one.displayNode();
 
+	//Create new object
+	Interlink two(one);
+
+	cout << "\n";
+
+	//Display copy node data
+	two.displayNode();
+
 	cout << "\n\n\n\nARIGATO\n\n\n\n";
 
 
