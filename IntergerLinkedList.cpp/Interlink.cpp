@@ -132,3 +132,36 @@ Interlink::~Interlink(){
 		nodeptr = nextNode;
 	}
 }
+
+/*
+We cannot just copy the node from one list to the others next, we can copy the value however,
+So we need to create a new node for every element we want to copy and copy the other list's value only
+*/
+Interlink::Interlink(const Interlink &obj){
+	//create nodeptrs to iterate through both lists
+	IntNode* nodeptr;
+	IntNode* nodeptr1;
+	
+	if (!obj.head)
+		head = nullptr;
+	else {
+		head = new IntNode;
+		head->value = obj.head->value;
+
+		
+		nodeptr = obj.head -> next;
+		nodeptr1 = head;
+
+		while (nodeptr) {
+			nodeptr1->next = new IntNode;
+			nodeptr1 = nodeptr1->next;
+			nodeptr1->value= nodeptr->value;	
+			nodeptr = nodeptr->next;
+		}
+		nodeptr1->next = nullptr;
+	}
+	
+
+
+	
+}
