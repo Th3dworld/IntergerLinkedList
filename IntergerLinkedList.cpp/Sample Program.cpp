@@ -37,6 +37,13 @@ int main(){
 	//Display copy node data
 	two.displayNode();
 
+	//Reverse
+	try{ one.reverse(); }
+	catch (exception) { cout << "Cannot reverse empty list.\n"; }
+
+	//Display new data
+	one.displayNode();
+
 	cout << "\n\n\n\nARIGATO\n\n\n\n";
 
 
