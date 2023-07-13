@@ -30,7 +30,7 @@ class Interlink
 		void insertNode(int);
 		void deleteNode(int);
 		void displayNode()const;
-
+		void reverse();
 		
 };
 #endif // !INTERLINK_H
