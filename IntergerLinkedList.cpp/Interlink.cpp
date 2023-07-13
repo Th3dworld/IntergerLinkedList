@@ -160,8 +160,26 @@ Interlink::Interlink(const Interlink &obj){
 		}
 		nodeptr1->next = nullptr;
 	}
-	
+}
 
+void Interlink::reverse() {
+	IntNode* previous;
+	IntNode* current;
+	IntNode* next;
+	if (!head) {
+		throw std::exception("Empty list cannot be reversed");
+	}
+	else {
+		previous = nullptr;
+		next = nullptr;
+		current = head;
 
-	
+		while (current != nullptr) {
+			next = current->next;
+			current->next = previous;
+			previous = current;
+			current = next;
+		}
+		head = previous;
+	}
 }
